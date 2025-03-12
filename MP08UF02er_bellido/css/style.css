@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    background-image: url("../img/fons.jpg"); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative; 
+}
+
+.cap {
+    height: 589px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    z-index: 1; 
+}
+
+.titol {
+    height: 40px;
+    margin: 0;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+}
+
+h1 {
+    margin: 0 0 -50px 0;
+    text-align: center;
+    top: 20px;
+}
+
+.img1 {
+    height: 200px;
+}
+
+
+
+.cotxes {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; 
+    z-index: 1;
+    max-width: 80%; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    opacity: 50%;
+}
+
+.bloc {
+    float: left;
+    margin: 10px;
+}
+
+
+
+.bloc:hover {
+    animation: girar 0.3s infinite;
+    filter: hue-rotate(90deg);
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.footer {
+    height: 220px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1; 
+}
+
+.fonsrosa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid pink;
+    border-bottom: 749px solid transparent;
+    z-index: 0; 
+}
+
+@media (max-width: 1024px) {
+    .bloc {
+        width: calc(50% - 15px); /* 2 columnas por fila */
+        max-width: 130px;
+    }
+
+    .img1 {
+        max-height: 100px;
+    }
+
+    .furgo {
+        max-height: 300px;
+}
+
+@media (max-width: 768px) {
+    .cap {
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .bloc {
+        width: calc(100% - 15px); /* 1 columna por fila */
+        max-width: 120px;
+    }
+
+    .cotxes {
+        max-width: 100%;
+        margin-top: 150px;
+    }
+
+    .img1 {
+        max-height: 90px;
+    }
+
+    .titol {
+        font-size: 10px;
+    }
+
+    .furgo {
+        max-height: 300px;
+}
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    .bloc {
+        width: 85%;
+        max-width: 100px;
+    }
+
+    .img1 {
+        max-height: 80px;
+    }
+    
+   .titol {
+    font-size: 9px;
+   }
+
+   .furgo {
+    max-height: 300px;
+   }
+}
